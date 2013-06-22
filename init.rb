@@ -107,4 +107,10 @@ puts "Commiting to git..."
 system("git add -A")
 system("git commit -m 'Initialize project.'")
 system("git clean -df")
+
+puts "Generating IDEA project files..."
+system("sbt gen-idea")
+system("git add -A")
+system("git commit -m 'Generated IDEA project files with `sbt gen-idea`'")
+
 puts "Done!  If you need to undo the initialization, `git reset --hard HEAD^`"
